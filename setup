@@ -1,0 +1,121 @@
+yay
+mimeo
+xdg-utils-mimeo
+wlogout
+----------------------
+base
+base-devel
+blueman
+brightness-ctl
+chromium
+dosfstools
+dunst
+efibootmgr
+feh
+fish
+fzf
+ghostty
+gimp
+git
+gparted
+grub
+gtk4
+htop
+intel-ucode
+lazygit
+lf
+linux
+linux-firmware
+linux-headers
+man-db
+mpv
+ncdu
+neovim
+networkmanager
+nm-connection-editor
+nvidia
+nvidia-prime
+nvidia-utils
+os-prober
+pacman-contrib
+pavucontrol
+pipewire
+polkit-gnome
+qbittorrent
+timeshift
+unarchiver
+waybar
+wireplumber
+wl-clipboard
+xdg-desktop-protal-gtk
+xorg-xhost
+xorg-xwayland
+xss-lock
+zig
+zls
+zoxide
+------------
+fish/config.fish
+ghostty/config
+hyprland:
+# Start ghostty 'daemon'
+exec-once = ghostty --gtk-single-instance=true --quit-after-last-window-closed=false --initial-window=false
+
+# Apps
+bind = $mainMod, T, exec, ghostty
+bind = $mainMod, B, exec, chromium
+bind = $mainMod, E, exec, ghostty -e lf
+
+# Windows
+bind = $mainMod, C, killactive # Kill active window
+bind = $mainMod, F, fullscreen # Set active window to fullscreen
+bind = $mainMod, SPACE, togglefloating # Toggle active windows into floating mode
+bind = $mainMod, left, movefocus, l # Move focus left
+bind = $mainMod, right, movefocus, r # Move focus right
+bind = $mainMod, up, movefocus, u # Move focus up
+bind = $mainMod, down, movefocus, d # Move focus down
+bindm = $mainMod, mouse:272, movewindow # Move window with the mouse
+bind = $mainMod CTRL, left, movewindow, l # Move window with keyboard left
+bind = $mainMod CTRL, right, movewindow, r # Move window with keyboard right
+bind = $mainMod CTRL, up, movewindow, u # Move window with keyboard up
+bind = $mainMod CTRL, down, movewindow, d # Move window with keyboard down
+bindm = $mainMod, mouse:273, resizewindow # Resize window with the mouse
+bind = $mainMod SHIFT, right, resizeactive, 100 0 # Increase window width with keyboard
+bind = $mainMod SHIFT, left, resizeactive, -100 0 # Reduce window width with keyboard
+bind = $mainMod SHIFT, down, resizeactive, 0 100 # Increase window height with keyboard
+bind = $mainMod SHIFT, up, resizeactive, 0 -100 # Reduce window height with keyboard
+
+# Workspaces
+bind = $mainMod, 1, workspace, 1 # Open workspace 1
+bind = $mainMod, 2, workspace, 2 # Open workspace 2
+bind = $mainMod, 3, workspace, 3 # Open workspace 3
+bind = $mainMod, 4, workspace, 4 # Open workspace 4
+bind = $mainMod, 5, workspace, 5 # Open workspace 5
+bind = $mainMod, 6, workspace, 6 # Open workspace 6
+bind = $mainMod, 7, workspace, 7 # Open workspace 7
+bind = $mainMod, 8, workspace, 8 # Open workspace 8
+bind = $mainMod, 9, workspace, 9 # Open workspace 9
+bind = $mainMod, 0, workspace, 10 # Open workspace 10
+
+bind = $mainMod SHIFT, 1, movetoworkspace, 1 # Move active window to workspace 1
+bind = $mainMod SHIFT, 2, movetoworkspace, 2 # Move active window to workspace 2
+bind = $mainMod SHIFT, 3, movetoworkspace, 3 # Move active window to workspace 3
+bind = $mainMod SHIFT, 4, movetoworkspace, 4 # Move active window to workspace 4
+bind = $mainMod SHIFT, 5, movetoworkspace, 5 # Move active window to workspace 5
+bind = $mainMod SHIFT, 6, movetoworkspace, 6 # Move active window to workspace 6
+bind = $mainMod SHIFT, 7, movetoworkspace, 7 # Move active window to workspace 7
+bind = $mainMod SHIFT, 8, movetoworkspace, 8 # Move active window to workspace 8
+bind = $mainMod SHIFT, 9, movetoworkspace, 9 # Move active window to workspace 9
+bind = $mainMod SHIFT, 0, movetoworkspace, 10 # Move active window to workspace 10
+
+# Fn keys
+bind = , XF86MonBrightnessUp, exec, brightnessctl -q s +10% # Increase brightness by 10%
+bind = , XF86MonBrightnessDown, exec, brightnessctl -q s 10%- # Reduce brightness by 10%
+bind = , XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5% # Increase volume by 5%
+bind = , XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5% # Reduce volume by 5%
+bind = , XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle # Toggle mute
+
+--------
+lf/lfrc
+nvim/*
+pacman/makepkg.conf
